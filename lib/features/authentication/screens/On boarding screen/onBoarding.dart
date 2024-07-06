@@ -2,8 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quickmart/features/authentication/controllers/onBoarding_controller.dart';
+import 'package:quickmart/features/authentication/screens/widgets/loginSignup-widgets.dart';
 import 'package:quickmart/utils/constants/texts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import '../../../../common/widgets/common-widgets.dart';
 
 class onBoarding extends StatelessWidget {
    const onBoarding({Key? key}) : super(key: key);
@@ -69,25 +72,8 @@ class onBoarding extends StatelessWidget {
                 bottom: 80,
                 left: 22,
                 right: 22,
-                child: InkWell(
-                  onTap: () => controller.nextPage(),
-                  child: Container(
-                    width: size.width,
-                    height: size.height * .065,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.black87,
-                    ),
-                    child: const Center(
-                        child: Text(
-                      'Next',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'jakarta',
-                          fontSize: 16),
-                    )),
-                  ),
-                )),
+                child: mainButton(size, ()=>controller.nextPage(), 'Next'),
+            ),
 
             //Dot navigation smoothPageIndicator
             Positioned(
