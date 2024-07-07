@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../common/widgets/image block.dart';
+import 'package:quickmart/common/widgets/Product%20Card/productImageBlock.dart';
 import '../home/home widgets/homeScreenWidgets.dart';
 
 
@@ -67,7 +67,7 @@ class brandShowcaseBlock extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: productImages.map((productImage) => imageBlock(85, 85, productImage)).toList(),
+                children: productImages.map((productImage) => productImageBlock(height: 85, width: 85, image: productImage, boxfit: null,)).toList(),
               ),
             )
           ],

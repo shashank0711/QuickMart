@@ -79,6 +79,13 @@ flutter:
     - assets/images/on boarding images/
     - assets/images/email verification images/
     - assets/images/Banners/
+    - assets/images/camera/
+    - assets/images/cloth/
+    - assets/images/electronics/
+    - assets/images/furniture/
+    - assets/images/home decor/
+    - assets/images/shoes/
+    - assets/images/watch/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

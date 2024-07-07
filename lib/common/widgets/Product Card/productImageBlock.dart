@@ -4,26 +4,27 @@ import 'package:flutter/material.dart';
 //product image block with rounded corners
 class productImageBlock extends StatelessWidget {
   const productImageBlock({
-    super.key, required this.height, this.image, required this.width,
+    super.key, required this.height, required this.image, required this.width, required this.boxfit,
   });
 
   final double height, width;
-  final image;
+  final String image;
+  final boxfit;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: height,
       width: width,
-      margin: EdgeInsets.all(2),
+      margin: const EdgeInsets.all(2),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: Colors.red
+          color: Colors.grey.shade300
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(15),
         child: Image.asset(image,
-          fit: BoxFit.cover,
+          fit: boxfit,
         ),
       ),
     );

@@ -39,7 +39,7 @@ class storeScreen extends StatelessWidget {
                 automaticallyImplyLeading: false,
                 pinned: true,
                 floating: true,
-                expandedHeight: 400,
+                expandedHeight: 370,
                 backgroundColor: Colors.white,
                 flexibleSpace: Padding(
                   padding: const EdgeInsets.all(10.0),
@@ -47,9 +47,6 @@ class storeScreen extends StatelessWidget {
                     shrinkWrap: true,
                     physics: NeverScrollableScrollPhysics(),
                     children: [
-                      SizedBox(
-                        height: size.height * .045,
-                      ),
 
                       //search bar
                       searchbar(size, true),
@@ -132,9 +129,9 @@ class storeScreen extends StatelessWidget {
                             brandName: 'Sony',
                             itemCountText: '256 items',
                             productImages: [
-                              'assets/images/camera1.png',
-                              'assets/images/camera2.png',
-                              'assets/images/camera3.png',
+                              'assets/images/camera/camera1.png',
+                              'assets/images/camera/camera2.png',
+                              'assets/images/camera/camera3.png',
                             ]
                         ),
 

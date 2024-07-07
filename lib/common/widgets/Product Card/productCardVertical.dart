@@ -5,8 +5,9 @@ import 'package:quickmart/common/widgets/Product%20Card/productImageBlock.dart';
 import '../../../features/shop/screens/home/home widgets/homeScreenWidgets.dart';
 
 class productCardVertical extends StatelessWidget {
-  const productCardVertical({Key? key}) : super(key: key);
+  const productCardVertical({Key? key, this.image}) : super(key: key);
 
+  final image;
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +28,11 @@ class productCardVertical extends StatelessWidget {
             Stack(
               children: [
                 //image block
-                const productImageBlock(
+                 const productImageBlock(
                   height: 120,
                   width: double.maxFinite,
-                  image: 'assets/images/Rectangle 43.png',
+                  image: 'assets/images/furniture/furniture1.png',
+                   boxfit: null,
                 ),
 
                 //wishlist icon
