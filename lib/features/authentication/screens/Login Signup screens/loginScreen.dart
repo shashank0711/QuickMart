@@ -5,6 +5,8 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:quickmart/features/authentication/screens/Forgot%20password%20screens/forgotPasswordScreen.dart';
 import 'package:quickmart/features/authentication/screens/Login%20Signup%20screens/signupScreen.dart';
 import 'package:quickmart/features/authentication/screens/widgets/loginSignup-widgets.dart';
+import 'package:quickmart/features/shop/screens/home/homeScreen.dart';
+import 'package:quickmart/navigation_menu.dart';
 import '../../../../common/widgets/common-widgets.dart';
 
 class loginScreen extends StatelessWidget {
@@ -84,7 +86,7 @@ class loginScreen extends StatelessWidget {
                 ),
 
                 //main login button
-                mainButton(size, () {}, 'Login'),
+                mainButton(size, ()=> Get.to(()=> navigationMenu()), 'Login'),
 
                 SizedBox(
                   height: size.height * .02,
