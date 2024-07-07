@@ -1,13 +1,13 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 import 'package:quickmart/common/widgets/common-widgets.dart';
 import 'package:quickmart/common/widgets/Product%20Card/productCardVertical.dart';
-import 'package:quickmart/features/shop/controllers/homeController.dart';
 import '../../../../common/widgets/Curved Edges/curvedEdgesWidget.dart';
+import '../../../../common/widgets/custom app bar/customAppBar.dart';
 import 'home widgets/homeScreenWidgets.dart';
+
+
 
 class homeScreen extends StatelessWidget {
   const homeScreen({Key? key}) : super(key: key);
@@ -27,7 +27,7 @@ class homeScreen extends StatelessWidget {
                 child: Container(
                   color: Colors.cyan.shade200,
                   child: SizedBox(
-                    height: size.height * .4,
+                    height: size.height * .42,
                     child: Stack(
                       children: [
                         //for custom design of the application two positioned widgets are used
@@ -46,44 +46,34 @@ class homeScreen extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              //home app bar
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  //text showing user name
-                                  const Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Good Day for Shopping.',
-                                        style: TextStyle(
-                                            fontFamily: 'jakarta',
-                                            fontSize: 13,
-                                            color: Colors.black87),
-                                      ),
-                                      Text(
-                                        'Shashank Singh',
-                                        style: TextStyle(
-                                            fontFamily: 'jakarta',
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.black87),
-                                      ),
-                                    ],
-                                  ),
-
-                                  //cart logo with the counter
+                              customAppBar(
+                                title: const Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Good Day for Shopping.',
+                                      style: TextStyle(
+                                          fontFamily: 'jakarta', fontSize: 13, color: Colors.black87),
+                                    ),
+                                    Text(
+                                      'Shashank Singh',
+                                      style: TextStyle(
+                                          fontFamily: 'jakarta',
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black87),
+                                    ),
+                                  ],
+                                ),
+                                action: [
                                   cartCounterIcon(
                                     iconColor: Colors.black,
                                     onpressed: () {},
                                   ),
                                 ],
                               ),
-
                               SizedBox(
-                                height: size.height * .03,
+                                height: size.height * .02,
                               ),
 
                               //search bar
@@ -105,7 +95,7 @@ class homeScreen extends StatelessWidget {
                               ),
 
                               SizedBox(
-                                height: size.height * .02,
+                                height: size.height * .025,
                               ),
 
                               //categories
@@ -127,7 +117,8 @@ class homeScreen extends StatelessWidget {
                                               width: 60,
                                               decoration: BoxDecoration(
                                                   borderRadius:
-                                                      BorderRadius.circular(100),
+                                                      BorderRadius.circular(
+                                                          100),
                                                   color: Colors.white),
                                               child: Center(
                                                 child: Image.asset(
@@ -176,27 +167,23 @@ class homeScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     const slidingBanner(),
-
-
-                    sectionHeading(size, 'Popular Categories', (){}),
-
-
+                    sectionHeading(size, 'Popular Categories', () {}),
                     GridView.builder(
                       itemCount: 6,
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         mainAxisSpacing: 30,
                         crossAxisSpacing: 15,
                         mainAxisExtent: 210,
                       ),
-                      itemBuilder: (_, index) => productCardVertical(),)
+                      itemBuilder: (_, index) => productCardVertical(),
+                    ),
                   ],
                 ),
-                
               )
-
 
               //product cards
             ],
