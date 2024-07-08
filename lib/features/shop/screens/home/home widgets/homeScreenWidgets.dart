@@ -64,7 +64,7 @@ class slidingBanner extends StatelessWidget {
 }
 
 //section headings
-Widget sectionHeading(Size size, text, onPressedFunction) {
+Widget sectionHeading(Size size, text, onPressedFunction, final bool showActionButton ) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 17),
     child: Row(
@@ -76,9 +76,10 @@ Widget sectionHeading(Size size, text, onPressedFunction) {
             fontFamily: 'jakarta',
             fontWeight: FontWeight.bold,
             fontSize: 17,
+            wordSpacing: 3
           ),
         ),
-        InkWell(
+        if(showActionButton) InkWell(
           onTap: onPressedFunction,
           child: const Text(
             'View All',
@@ -89,7 +90,7 @@ Widget sectionHeading(Size size, text, onPressedFunction) {
               fontSize: 13,
             ),
           ),
-        )
+        ),
       ],
     ),
   );

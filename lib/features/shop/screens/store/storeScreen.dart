@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quickmart/common/widgets/common-widgets.dart';
 import 'package:quickmart/features/shop/screens/store/storeWidgets.dart';
-import '../../../../common/widgets/Product Card/productCardVertical.dart';
+import '../../../../common/widgets/category tab view/categoryTabView.dart';
 import '../../../../common/widgets/custom app bar/customAppBar.dart';
 import '../../../../common/widgets/custom tab bar/customTabBar.dart';
 import '../../../../common/widgets/grid view layout/customGridView.dart';
@@ -57,7 +57,7 @@ class storeScreen extends StatelessWidget {
                       ),
 
                       //featured brands heading section
-                      sectionHeading(size, 'Featured Brands', () {}),
+                      sectionHeading(size, 'Featured Brands', () {}, true),
 
                       //featured brands cards
                       customGridView(
@@ -109,38 +109,12 @@ class storeScreen extends StatelessWidget {
           },
           body: TabBarView(
             children: [
-              ListView(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Column(
-                        children: [
-                          //popular brand showcase with their products block
-                          const brandShowcaseBlock(
-                              brandIcon: 'assets/icons/brand icons/sony.png',
-                              brandName: 'Sony',
-                              itemCountText: '256 items',
-                              productImages: [
-                                'assets/images/camera/camera1.png',
-                                'assets/images/camera/camera2.png',
-                                'assets/images/camera/camera3.png',
-                              ]),
+              categoryTabView(size: size),
+              categoryTabView(size: size),
+              categoryTabView(size: size),
+              categoryTabView(size: size),
+              categoryTabView(size: size),
 
-                          //you might also like text
-                          sectionHeading(size, 'You Might Like', () {}),
-
-                          //multiple more products
-                          customGridView(
-                            itemCount: 3,
-                            itemBuilder: (_, index) =>
-                                const productCardVertical(),
-                          )
-                        ],
-                      ),
-                    ),
-                  ])
             ],
           ),
         ),

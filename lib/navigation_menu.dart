@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:quickmart/features/personalization/screens/profile%20screen/profileScreen.dart';
 import 'package:quickmart/features/shop/screens/home/homeScreen.dart';
 import 'package:quickmart/features/shop/screens/store/storeScreen.dart';
 import 'package:quickmart/features/shop/screens/wishlist/wishlistScreen.dart';
@@ -42,8 +43,6 @@ class NavigationController extends GetxController {
 
     const wishlistScreen(),
 
-    Container(
-      color: Colors.green,
-    ),
+    const profileScreen(),
   ];
 }
