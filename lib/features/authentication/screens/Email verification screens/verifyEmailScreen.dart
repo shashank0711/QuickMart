@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quickmart/common/widgets/common-widgets.dart';
 import 'package:quickmart/features/authentication/screens/Email%20verification%20screens/verificationSuccesScreen.dart';
-import 'package:quickmart/features/authentication/screens/Login%20Signup%20screens/loginScreen.dart';
 import 'package:quickmart/features/authentication/screens/Login%20Signup%20screens/signupScreen.dart';
 import 'package:quickmart/utils/constants/texts.dart';
 
 class verifyEmailScreen extends StatelessWidget {
-  const verifyEmailScreen({Key? key}) : super(key: key);
+  const verifyEmailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,7 @@ class verifyEmailScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 15),
             child: IconButton(
-                onPressed: () => Get.offAll(() => signupscreen()),
+                onPressed: () => Get.offAll(() => const signupscreen()),
                 icon: const Icon(
                   Icons.clear,
                   size: 25,
@@ -87,7 +86,7 @@ class verifyEmailScreen extends StatelessWidget {
 
               mainButton(
                 size,
-                () => Get.to(() => verificationSuccessScreen()),
+                () => Get.to(() => const verificationSuccessScreen()),
                 'Continue',
               ),
 

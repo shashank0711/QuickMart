@@ -5,7 +5,7 @@ Widget LoginSignupAlert(statement, onTapFunction, text) {
     children: [
       Text(
         statement,
-        style: TextStyle(fontFamily: 'jakarta'),
+        style: const TextStyle(fontFamily: 'jakarta'),
       ),
       InkWell(
         onTap: onTapFunction,
@@ -52,7 +52,7 @@ Widget nameAndEmailFormField(text){
           fontSize: 13),
       decoration: InputDecoration(
         hintText: text,
-        contentPadding: EdgeInsets.all(20),
+        contentPadding: const EdgeInsets.all(20),
         hintStyle: const TextStyle(fontFamily: 'jakarta', fontSize: 13),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
@@ -86,8 +86,8 @@ Widget passwordFormField(){
           fontSize: 13),
       decoration: InputDecoration(
         hintText: 'Enter your password',
-        suffixIcon: Icon(Icons.remove_red_eye_outlined,color: Colors.black38,size: 30,),
-        contentPadding: EdgeInsets.all(20),
+        suffixIcon: const Icon(Icons.remove_red_eye_outlined,color: Colors.black38,size: 30,),
+        contentPadding: const EdgeInsets.all(20),
         hintStyle: const TextStyle(fontFamily: 'jakarta', fontSize: 13),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),

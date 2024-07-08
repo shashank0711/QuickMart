@@ -1,15 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quickmart/features/authentication/controllers/onBoarding_controller.dart';
-import 'package:quickmart/features/authentication/screens/widgets/loginSignup-widgets.dart';
 import 'package:quickmart/utils/constants/texts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../../common/widgets/common-widgets.dart';
 
 class onBoarding extends StatelessWidget {
-   const onBoarding({Key? key}) : super(key: key);
+   const onBoarding({super.key});
 
 
   @override
@@ -78,7 +76,7 @@ class onBoarding extends StatelessWidget {
             //Dot navigation smoothPageIndicator
             Positioned(
               bottom: 35,
-              child: Container(
+              child: SizedBox(
                   width: size.width,
                   child: Center(
                       child: SmoothPageIndicator(

@@ -4,7 +4,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:quickmart/features/authentication/screens/On%20boarding%20screen/onBoarding.dart';
 
 class splash_screen extends StatefulWidget {
-  const splash_screen({Key? key}) : super(key: key);
+  const splash_screen({super.key});
 
   @override
   State<splash_screen> createState() => _splash_screenState();
@@ -30,7 +30,7 @@ class _splash_screenState extends State<splash_screen> {
       ),
       backgroundColor: Colors.white,
       // splashIconSize: 10000,
-      nextScreen: onBoarding(),
+      nextScreen: const onBoarding(),
     );
   }
 }

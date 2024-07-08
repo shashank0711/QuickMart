@@ -1,16 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:quickmart/common/widgets/common-widgets.dart';
 import 'package:quickmart/common/widgets/Product%20Card/productCardVertical.dart';
+import 'package:quickmart/common/widgets/grid%20view%20layout/customGridView.dart';
 import '../../../../common/widgets/Curved Edges/curvedEdgesWidget.dart';
 import '../../../../common/widgets/custom app bar/customAppBar.dart';
 import 'home widgets/homeScreenWidgets.dart';
 
-
-
 class homeScreen extends StatelessWidget {
-  const homeScreen({Key? key}) : super(key: key);
+  const homeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +24,7 @@ class homeScreen extends StatelessWidget {
                 child: Container(
                   color: Colors.cyan.shade200,
                   child: SizedBox(
-                    height: size.height * .42,
+                    height: size.height * .41,
                     child: Stack(
                       children: [
                         //for custom design of the application two positioned widgets are used
@@ -42,7 +39,8 @@ class homeScreen extends StatelessWidget {
 
                         //main content of the header part
                         Padding(
-                          padding: const EdgeInsets.all(15.0),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 15, vertical: 10),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -53,7 +51,9 @@ class homeScreen extends StatelessWidget {
                                     Text(
                                       'Good Day for Shopping.',
                                       style: TextStyle(
-                                          fontFamily: 'jakarta', fontSize: 13, color: Colors.black87),
+                                          fontFamily: 'jakarta',
+                                          fontSize: 13,
+                                          color: Colors.black87),
                                     ),
                                     Text(
                                       'Shashank Singh',
@@ -168,19 +168,10 @@ class homeScreen extends StatelessWidget {
                   children: [
                     const slidingBanner(),
                     sectionHeading(size, 'Popular Categories', () {}),
-                    GridView.builder(
+                    customGridView(
                       itemCount: 6,
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        mainAxisSpacing: 30,
-                        crossAxisSpacing: 15,
-                        mainAxisExtent: 210,
-                      ),
-                      itemBuilder: (_, index) => productCardVertical(),
-                    ),
+                      itemBuilder: (_, index) => const productCardVertical(),
+                    )
                   ],
                 ),
               )

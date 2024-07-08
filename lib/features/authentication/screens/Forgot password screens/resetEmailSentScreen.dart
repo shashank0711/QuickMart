@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:quickmart/features/authentication/screens/Login%20Signup%20screens/loginScreen.dart';
 
 import '../../../../common/widgets/common-widgets.dart';
 import '../../../../utils/constants/texts.dart';
 
 class resetEmailSentScreen extends StatelessWidget {
-  const resetEmailSentScreen({Key? key}) : super(key: key);
+  const resetEmailSentScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +74,7 @@ class resetEmailSentScreen extends StatelessWidget {
 
               mainButton(
                 size,
-                    () => Get.offAll(() => loginScreen()),
+                    () => Get.offAll(() => const loginScreen()),
                 'Done',
               ),
 

@@ -6,7 +6,7 @@ import 'package:quickmart/features/authentication/screens/Login%20Signup%20scree
 import '../../../../utils/constants/texts.dart';
 
 class verificationSuccessScreen extends StatelessWidget {
-  const verificationSuccessScreen({Key? key}) : super(key: key);
+  const verificationSuccessScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +61,7 @@ class verificationSuccessScreen extends StatelessWidget {
 
                 //continue button
                 mainButton(
-                    size, () => Get.offAll(() => loginScreen()), 'Continue'),
+                    size, () => Get.offAll(() => const loginScreen()), 'Continue'),
               ],
             ),
           ),

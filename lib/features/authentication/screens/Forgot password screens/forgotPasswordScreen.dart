@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:quickmart/common/widgets/common-widgets.dart';
 import 'package:quickmart/features/authentication/screens/Forgot%20password%20screens/resetEmailSentScreen.dart';
 import 'package:quickmart/features/authentication/screens/widgets/loginSignup-widgets.dart';
 import '../../../../utils/constants/texts.dart';
 
 class forgotPasswordScreen extends StatelessWidget {
-  const forgotPasswordScreen({Key? key}) : super(key: key);
+  const forgotPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +54,7 @@ class forgotPasswordScreen extends StatelessWidget {
               ),
 
               mainButton(
-                  size, () => Get.to(() => resetEmailSentScreen()), 'Submit'),
+                  size, () => Get.to(() => const resetEmailSentScreen()), 'Submit'),
             ],
           ),
         ),

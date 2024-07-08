@@ -1,16 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:quickmart/features/authentication/screens/Forgot%20password%20screens/forgotPasswordScreen.dart';
 import 'package:quickmart/features/authentication/screens/Login%20Signup%20screens/signupScreen.dart';
 import 'package:quickmart/features/authentication/screens/widgets/loginSignup-widgets.dart';
-import 'package:quickmart/features/shop/screens/home/homeScreen.dart';
 import 'package:quickmart/navigation_menu.dart';
 import '../../../../common/widgets/common-widgets.dart';
 
 class loginScreen extends StatelessWidget {
-  const loginScreen({Key? key}) : super(key: key);
+  const loginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +45,7 @@ class loginScreen extends StatelessWidget {
                 ),
 
                 LoginSignupAlert("Don't have an account?  ",
-                    () => Get.off(() => signupscreen()), 'Signup'),
+                    () => Get.off(() => const signupscreen()), 'Signup'),
 
                 SizedBox(
                   height: size.height * .04,
@@ -67,7 +64,7 @@ class loginScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     TextButton(
-                      onPressed: () => Get.to(() => forgotPasswordScreen()),
+                      onPressed: () => Get.to(() => const forgotPasswordScreen()),
                       child: Text(
                         'Forgot Password ?',
                         style: TextStyle(
@@ -86,7 +83,7 @@ class loginScreen extends StatelessWidget {
                 ),
 
                 //main login button
-                mainButton(size, ()=> Get.to(()=> navigationMenu()), 'Login'),
+                mainButton(size, ()=> Get.to(()=> const navigationMenu()), 'Login'),
 
                 SizedBox(
                   height: size.height * .02,

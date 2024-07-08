@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:quickmart/common/widgets/Product%20Card/productImageBlock.dart';
 import '../../../features/shop/screens/home/home widgets/homeScreenWidgets.dart';
 
 class productCardVertical extends StatelessWidget {
-  const productCardVertical({Key? key, this.image}) : super(key: key);
+  const productCardVertical({super.key, this.image});
 
   final image;
 
@@ -58,7 +57,7 @@ class productCardVertical extends StatelessWidget {
 
             //main details of the product
             const Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+              padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

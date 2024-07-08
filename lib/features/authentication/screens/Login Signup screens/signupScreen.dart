@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:quickmart/features/authentication/screens/Login%20Signup%20screens/loginScreen.dart';
 import 'package:quickmart/features/authentication/screens/Email%20verification%20screens/verifyEmailScreen.dart';
 import 'package:quickmart/features/authentication/screens/widgets/loginSignup-widgets.dart';
@@ -8,7 +7,7 @@ import 'package:quickmart/features/authentication/screens/widgets/loginSignup-wi
 import '../../../../common/widgets/common-widgets.dart';
 
 class signupscreen extends StatelessWidget {
-  const signupscreen({Key? key}) : super(key: key);
+  const signupscreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +44,7 @@ class signupscreen extends StatelessWidget {
                   height: size.height * .005,
                 ),
 
-                LoginSignupAlert("Already have an account?  ",()=> Get.off(()=>loginScreen()), 'Login'),
+                LoginSignupAlert("Already have an account?  ",()=> Get.off(()=>const loginScreen()), 'Login'),
 
                 SizedBox(
                   height: size.height * .03,
@@ -74,7 +73,7 @@ class signupscreen extends StatelessWidget {
                 ),
 
                 //main login button
-                mainButton(size, () => Get.to(() => verifyEmailScreen()), 'Create Account'),
+                mainButton(size, () => Get.to(() => const verifyEmailScreen()), 'Create Account'),
 
                 SizedBox(
                   height: size.height * .02,

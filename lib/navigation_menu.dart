@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:quickmart/features/shop/screens/home/homeScreen.dart';
 import 'package:quickmart/features/shop/screens/store/storeScreen.dart';
+import 'package:quickmart/features/shop/screens/wishlist/wishlistScreen.dart';
 
 class navigationMenu extends StatelessWidget {
-  const navigationMenu({Key? key}) : super(key: key);
+  const navigationMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +36,12 @@ class navigationMenu extends StatelessWidget {
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
   final screens = [
-    homeScreen(),
+    const homeScreen(),
 
-    storeScreen(),
-    Container(
-      color: Colors.cyan,
-    ),
+    const storeScreen(),
+
+    const wishlistScreen(),
+
     Container(
       color: Colors.green,
     ),
