@@ -16,9 +16,10 @@ class storeScreen extends StatelessWidget {
     return DefaultTabController(
       length: 5,
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: customAppBar(
           title: const Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: EdgeInsets.only(top: 20,left: 10),
             child: Text(
               'Store',
               style: TextStyle(
@@ -29,7 +30,7 @@ class storeScreen extends StatelessWidget {
           ),
           action: [
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.only(right: 20,top: 10),
               child: cartCounterIcon(onpressed: () {}),
             )
           ],

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:quickmart/features/personalization/screens/edit%20user%20profile%20screen/editUserProfileScreen.dart';
 import '../../../../common/widgets/Product Card/productImageBlock.dart';
-
 
 //user profile tile to show the user name, image and email
 class userProfileTile extends StatelessWidget {
@@ -18,7 +20,6 @@ class userProfileTile extends StatelessWidget {
         width: 50,
         boxfit: BoxFit.cover,
       ),
-
       title: const Text(
         'Shashank Singh',
         style: TextStyle(
@@ -29,7 +30,6 @@ class userProfileTile extends StatelessWidget {
           wordSpacing: 3,
         ),
       ),
-
       subtitle: const Text(
         'shashanksingh07011@gmail.com',
         style: TextStyle(
@@ -40,19 +40,19 @@ class userProfileTile extends StatelessWidget {
         ),
         overflow: TextOverflow.ellipsis,
       ),
-
       trailing: IconButton(
-        icon: const Icon(Iconsax.edit, color: Colors.black,),
-        onPressed: () {},
+        icon: const Icon(
+          Iconsax.edit,
+          color: Colors.black,
+        ),
+        onPressed: () => Get.to(() => const editUserProfileScreen()),
       ),
     );
   }
 }
 
-
-
 //profile heading section
-Widget profileSectionHeading(String heading){
+Widget profileSectionHeading(String heading) {
   return Padding(
     padding: const EdgeInsets.only(top: 10, bottom: 20),
     child: Text(
@@ -61,18 +61,17 @@ Widget profileSectionHeading(String heading){
           fontFamily: 'jakarta',
           fontWeight: FontWeight.bold,
           fontSize: 14,
-          wordSpacing: 3
-      ),
+          wordSpacing: 3),
     ),
   );
 }
 
-
-
 //profile menu tile
 class profileMenuTile extends StatelessWidget {
   const profileMenuTile({
-    super.key, required this.icon, required this.menuTitle,
+    super.key,
+    required this.icon,
+    required this.menuTitle,
   });
 
   final icon;
@@ -81,7 +80,7 @@ class profileMenuTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){},
+      onTap: () {},
       child: Padding(
         padding: const EdgeInsets.only(bottom: 5),
         child: Column(
@@ -112,8 +111,10 @@ class profileMenuTile extends StatelessWidget {
                       )
                     ],
                   ),
-
-                  const Icon(Icons.arrow_forward_ios,color: Colors.black54,)
+                  const Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.black54,
+                  )
                 ],
               ),
             ),
@@ -126,4 +127,40 @@ class profileMenuTile extends StatelessWidget {
       ),
     );
   }
+}
+
+//name and email edit field
+Widget nameEmailEditTile(String nameEmailText, String textInput, ontapFunction) {
+  return GestureDetector(
+    onTap: ontapFunction,
+    child: Row(
+      children: [
+        Expanded(
+          flex: 2,
+          child: Text(
+            nameEmailText,
+            style: const TextStyle(
+                fontFamily: 'jakarta',
+                color: Colors.black54,
+                fontWeight: FontWeight.bold,
+                fontSize: 15),
+          ),
+        ),
+        Expanded(
+          flex: 5,
+          child: Text(
+            textInput,
+            style: const TextStyle(
+                fontFamily: 'jakarta', fontWeight: FontWeight.bold, fontSize: 15),
+            overflow: TextOverflow.ellipsis,
+          ),
+        ),
+        const Icon(
+          Icons.arrow_forward_ios,
+          color: Colors.black54,
+          size: 18,
+        )
+      ],
+    ),
+  );
 }

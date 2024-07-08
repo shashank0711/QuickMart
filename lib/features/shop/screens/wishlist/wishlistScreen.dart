@@ -9,6 +9,7 @@ class wishlistScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: const customAppBar(
         title: Padding(
           padding: EdgeInsets.only(top: 20),

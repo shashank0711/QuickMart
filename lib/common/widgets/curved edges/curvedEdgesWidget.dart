@@ -7,11 +7,11 @@ class curvedEdgesWidget extends StatelessWidget {
   const curvedEdgesWidget({
     super.key,
     required this.size,
-    this.child,
+    required this.child,
   });
 
   final Size size;
-  final Widget? child;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {

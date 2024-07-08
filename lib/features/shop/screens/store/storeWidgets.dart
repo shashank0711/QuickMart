@@ -20,6 +20,7 @@ Widget brandCard(brandIcon, brandName, itemCountText){
             brandNameWithVerifiedIcon(
               brandName: brandName,
               fontWeight: FontWeight.bold,
+              fontSize: 14,
             ),
             Text(
               itemCountText,

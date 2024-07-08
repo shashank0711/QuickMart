@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:quickmart/common/widgets/Product%20Card/productImageBlock.dart';
+import 'package:quickmart/features/shop/screens/product%20detail%20screen/productDetailScreen.dart';
 import '../../../features/shop/screens/home/home widgets/homeScreenWidgets.dart';
 
 class productCardVertical extends StatelessWidget {
@@ -12,7 +15,7 @@ class productCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return GestureDetector(
-      onTap: (){},
+      onTap: () => Get.to(() => const productDetailScreen()),
       child: Container(
         width: size.width * .4,
         // height: 200,
@@ -56,19 +59,19 @@ class productCardVertical extends StatelessWidget {
 
 
             //main details of the product
-            const Padding(
+             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                   Text(
+                   const Text(
                     'Nike air Jordan ',
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                     style: TextStyle(fontFamily: 'jakarta', fontSize: 15,fontWeight: FontWeight.bold),
                   ),
 
-                  brandNameWithVerifiedIcon(brandName: 'Nike', fontWeight: null,),
+                  brandNameWithVerifiedIcon(brandName: 'Nike', fontWeight: null, fontSize: 14,),
 
                    Text(
                     '₹ 1000',

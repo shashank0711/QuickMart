@@ -15,6 +15,7 @@ class customAppBar extends StatelessWidget implements PreferredSizeWidget{
     return AppBar(
       backgroundColor: Colors.transparent,
       surfaceTintColor: Colors.transparent,
+
       automaticallyImplyLeading: false,
       title: title,
       actions: action,

@@ -98,17 +98,19 @@ Widget sectionHeading(Size size, text, onPressedFunction, final bool showActionB
 
 //brand name with verified icon
 class brandNameWithVerifiedIcon extends StatelessWidget {
-   const brandNameWithVerifiedIcon({
+    brandNameWithVerifiedIcon({
     super.key,
-    this.brandName, this.fontWeight,
+    required this.brandName, this.fontWeight, required this.fontSize,
   });
 
-  final brandName;
-  final fontWeight;
+  final String brandName;
+  dynamic fontWeight;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisSize: MainAxisSize.min,
       children: [
         Text(
           brandName,
@@ -116,7 +118,7 @@ class brandNameWithVerifiedIcon extends StatelessWidget {
           maxLines: 1,
           style: TextStyle(
               fontFamily: 'jakarta',
-              fontSize: 14,
+              fontSize: fontSize,
               fontWeight: fontWeight),
         ),
         Padding(
