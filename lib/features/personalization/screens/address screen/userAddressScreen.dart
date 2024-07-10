@@ -95,7 +95,7 @@ class addressBlock extends StatelessWidget {
                   color: Colors.grey,
                   fontSize: 13,
                 ),),
-                Text('Ajay Kumar Garg Engineering College, Adhyatmik nagar, Ghaziabad, Uttar Pradesh ',style: TextStyle(
+                Text('Ajay Kumar Garg Engineering College, Adhyatmik nagar, Ghaziabad, Uttar Pradesh  ',style: TextStyle(
                     fontFamily: 'jakarta',
                     fontWeight: FontWeight.bold,
                     color: Colors.grey,
