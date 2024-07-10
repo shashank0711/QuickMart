@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:quickmart/common/widgets/common-widgets.dart';
 import 'package:quickmart/common/widgets/custom%20app%20bar/customAppBar.dart';
 import 'package:quickmart/common/widgets/custom%20header%20design/customHeaderDesign.dart';
+import 'package:quickmart/features/personalization/screens/address%20screen/userAddressScreen.dart';
+import 'package:quickmart/features/personalization/screens/order%20history/orderHistory.dart';
 import 'package:quickmart/features/personalization/screens/profile%20screen/profile%20widgets.dart';
 
 class profileScreen extends StatelessWidget {
@@ -59,9 +61,9 @@ class profileScreen extends StatelessWidget {
                 children: [
                   //personal information
                   profileSectionHeading('Personal Information'),
-                  const profileMenuTile(icon: Iconsax.box, menuTitle: 'Shipping Address'),
+                  profileMenuTile(icon: Iconsax.box, menuTitle: 'Shipping Address',onTap: () => Get.to(() => const userAddressScreen()) ),
                   const profileMenuTile(icon: Iconsax.card_tick_1, menuTitle: 'Payment Method'),
-                  const profileMenuTile(icon: Iconsax.receipt_edit, menuTitle: 'Order History'),
+                  profileMenuTile(icon: Iconsax.receipt_edit, menuTitle: 'Order History',onTap: () => Get.to(() => const orderHistoryScreen())),
 
                   const SizedBox(height: 10,),
 

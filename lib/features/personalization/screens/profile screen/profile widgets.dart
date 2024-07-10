@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:quickmart/features/personalization/screens/edit%20user%20profile%20screen/editUserProfileScreen.dart';
 import '../../../../common/widgets/Product Card/productImageBlock.dart';
@@ -71,16 +70,18 @@ class profileMenuTile extends StatelessWidget {
   const profileMenuTile({
     super.key,
     required this.icon,
-    required this.menuTitle,
+    required this.menuTitle, this.onTap,
   });
 
-  final icon;
+  final IconData icon;
   final String menuTitle;
+  final VoidCallback? onTap;
+
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Padding(
         padding: const EdgeInsets.only(bottom: 5),
         child: Column(
@@ -99,7 +100,7 @@ class profileMenuTile extends StatelessWidget {
                         color: Colors.black54,
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: 15),
+                        padding: const EdgeInsets.only(left: 15),
                         child: Text(
                           menuTitle,
                           style: const TextStyle(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 class bottomAddToCart extends StatelessWidget {
-  const bottomAddToCart({Key? key}) : super(key: key);
+  const bottomAddToCart({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class bottomAddToCart extends StatelessWidget {
                 ),
                 child: IconButton(
                   onPressed: (){},
-                  icon: Icon(Iconsax.minus, color: Colors.white,),
+                  icon: const Icon(Iconsax.minus, color: Colors.white,),
                 ),
               ),
 
@@ -47,7 +47,7 @@ class bottomAddToCart extends StatelessWidget {
                 ),
                 child: IconButton(
                   onPressed: (){},
-                  icon: Icon(Iconsax.add, color: Colors.white,),
+                  icon: const Icon(Iconsax.add, color: Colors.white,),
 
 
                 ),

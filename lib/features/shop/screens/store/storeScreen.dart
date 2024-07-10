@@ -18,6 +18,7 @@ class storeScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: customAppBar(
+          backArrow: false,
           title: const Padding(
             padding: EdgeInsets.only(top: 20,left: 10),
             child: Text(

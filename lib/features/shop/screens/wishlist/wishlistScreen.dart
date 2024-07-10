@@ -11,6 +11,7 @@ class wishlistScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: const customAppBar(
+        backArrow: false,
         title: Padding(
           padding: EdgeInsets.only(top: 20),
           child: Text(
@@ -24,9 +25,13 @@ class wishlistScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Column(
             children: [
+              const Divider(),
+              const SizedBox(height: 40,),
+
+
               customGridView(itemCount: 3, itemBuilder: (_, index) => const productCardVertical()),
             ],
           ),

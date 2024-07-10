@@ -1,20 +1,15 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:quickmart/common/widgets/Curved%20Edges/curvedEdgesWidget.dart';
 import 'package:quickmart/common/widgets/common-widgets.dart';
 import 'package:quickmart/common/widgets/custom%20app%20bar/customAppBar.dart';
-import 'package:quickmart/common/widgets/product%20card/productImageBlock.dart';
 import 'package:quickmart/features/shop/screens/home/home%20widgets/homeScreenWidgets.dart';
 import 'package:quickmart/features/shop/screens/product%20detail%20screen/bottomAddToCart.dart';
 import 'package:quickmart/features/shop/screens/product%20detail%20screen/widgets product detail screen.dart';
-import 'package:readmore/readmore.dart';
 
 class productDetailScreen extends StatelessWidget {
-  const productDetailScreen({Key? key}) : super(key: key);
+  const productDetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,14 +40,7 @@ class productDetailScreen extends StatelessWidget {
                     ),
 
                     customAppBar(
-                      title: IconButton(
-                        onPressed: () => Get.back(),
-                        icon: const Icon(
-                          Iconsax.arrow_left,
-                          size: 30,
-                          color: Colors.black54,
-                        ),
-                      ),
+                      backArrow: true,
                       action: [
                         Padding(
                           padding: const EdgeInsets.only(right: 15),
@@ -73,7 +61,7 @@ class productDetailScreen extends StatelessWidget {
 
               //product name and heading
               Padding(
-                padding: EdgeInsets.fromLTRB(15, 0, 15, 15),
+                padding: const EdgeInsets.fromLTRB(15, 0, 15, 15),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

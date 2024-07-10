@@ -1,17 +1,25 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
-import 'package:quickmart/common/widgets/Product%20Card/productImageBlock.dart';
 import 'package:quickmart/common/widgets/custom%20app%20bar/customAppBar.dart';
 import 'package:quickmart/features/personalization/screens/profile%20screen/profile%20widgets.dart';
 
 class editUserProfileScreen extends StatelessWidget {
-  const editUserProfileScreen({Key? key}) : super(key: key);
+  const editUserProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const customAppBar(
+        backArrow: true,
+        title: Text(
+          'Profile',
+          style: TextStyle(
+            fontFamily: 'jakarta',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
+      ),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Padding(
@@ -19,21 +27,10 @@ class editUserProfileScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  //image and change photo block
-                  const customAppBar(
-                    title: Text(
-                      'Profile',
-                      style: TextStyle(
-                        fontFamily: 'jakarta',
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
 
                   const SizedBox(height: 10,),
 
+                  //image and change photo block
                   SizedBox(
                     width: double.infinity,
                     child: Column(

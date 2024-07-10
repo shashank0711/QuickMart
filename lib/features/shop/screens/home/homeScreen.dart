@@ -26,6 +26,7 @@ class homeScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       customAppBar(
+                        backArrow: false,
                         title: const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [

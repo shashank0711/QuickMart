@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+
+import '../../features/shop/screens/cart/cartScreen.dart';
 
 
 //main button for everything
@@ -56,7 +59,7 @@ class cartCounterIcon extends StatelessWidget {
     return Stack(
       children: [
         IconButton(
-            onPressed: onpressed,
+            onPressed: () => Get.to(() => const cartScreen()),
             icon: Icon(
               Iconsax.shopping_bag,
               color: iconColor,

@@ -3,22 +3,23 @@ import 'package:flutter/material.dart';
 
 class customAppBar extends StatelessWidget implements PreferredSizeWidget{
   const customAppBar({
-    super.key, this.title, this.action,
+    super.key, this.title, this.action, this.backArrow = false,
   });
 
   final Widget? title;
   final List<Widget>? action;
-
+  final bool backArrow;
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: Colors.transparent,
-      surfaceTintColor: Colors.transparent,
-
-      automaticallyImplyLeading: false,
-      title: title,
-      actions: action,
+    return SafeArea(
+      child: AppBar(
+        backgroundColor: Colors.transparent,
+        surfaceTintColor: Colors.transparent,
+        automaticallyImplyLeading: backArrow ? true : false,
+        title: title,
+        actions: action,
+      ),
     );
   }
 

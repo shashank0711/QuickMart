@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:quickmart/common/widgets/Product%20Card/productImageBlock.dart';
 import 'package:quickmart/features/shop/screens/product%20detail%20screen/productDetailScreen.dart';
@@ -60,20 +59,20 @@ class productCardVertical extends StatelessWidget {
 
             //main details of the product
              Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                    const Text(
-                    'Nike air Jordan ',
+                    'Comforto Chair',
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                     style: TextStyle(fontFamily: 'jakarta', fontSize: 15,fontWeight: FontWeight.bold),
                   ),
 
-                  brandNameWithVerifiedIcon(brandName: 'Nike', fontWeight: null, fontSize: 14,),
+                  brandNameWithVerifiedIcon(brandName: 'Comforto', fontWeight: null, fontSize: 14,),
 
-                   Text(
+                   const Text(
                     '₹ 1000',
                     style: TextStyle(fontFamily: 'inter', fontSize: 16, fontWeight: FontWeight.bold),
                   ),
